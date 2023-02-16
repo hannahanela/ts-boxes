@@ -18,7 +18,7 @@ interface BoxFormInterface {
  * BoxList -> NewBoxForm
  */
 
-function NewBoxForm({ createBox }): JSX.Element {
+function NewBoxForm({ createBox }: any): JSX.Element {
   const [formData, setFormData] = useState<BoxFormInterface>({
     height: "",
     width: "",
