@@ -43,4 +43,6 @@ function Box({ id, width = 5, height = 5, backgroundColor, remove }: BoxInterfac
   );
 }
 
+
 export default Box;
+export type { BoxInterface };
