@@ -15,7 +15,7 @@ interface BoxInterface {
   width: number;
   height: number;
   backgroundColor: string;
-  remove: Function; // any, object
+  remove: (id: string) => void;
 }
 
 function Box({ id, width = 5, height = 5, backgroundColor, remove }: BoxInterface): JSX.Element {
