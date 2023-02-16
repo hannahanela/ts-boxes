@@ -11,11 +11,11 @@
  */
 
 interface BoxInterface {
-  id: string,
-  width: number,
-  height: number,
-  backgroundColor: string,
-  remove: Function, // any, object
+  id: string;
+  width: number;
+  height: number;
+  backgroundColor: string;
+  remove: Function; // any, object
 }
 
 function Box({ id, width = 5, height = 5, backgroundColor, remove }: BoxInterface): JSX.Element {
