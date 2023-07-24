@@ -96,3 +96,38 @@ interface UserInterface2 {
 let janeDoe: UserInterface2 = {
     username: "jane",
 };
+
+
+function showUserInfo(user: UserInterface): void {
+    console.log(`${user.username} is ${user.age}`);
+}
+function makeRandoUser(name: string): UserInterface {
+    return {
+        username: name,
+        age: Math.floor(Math.random() * 100),
+    };
+}
+
+interface StudentInterface {
+    name: string;
+    cohort: string;
+}
+
+interface InstructorInterface {
+    name: string;
+    salary: number;
+}
+
+function getUpperName(person: { name: string; }): string {
+    return person.name.toUpperCase();
+}
+
+let x: number | string;
+
+x = 42;
+x = "hello";
+
+let y: any;
+
+y = 42;
+y = "hello";
