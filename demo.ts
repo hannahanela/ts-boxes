@@ -65,6 +65,7 @@ person.age = 12;
 
 ////////////////////////////////////////////////////////////////////////////////
 
+//               arg type   return type
 function isSeven(n: number): string {
     if (n === 7) return "THAT IS INDEED 7!";
 
@@ -84,6 +85,25 @@ function hi(): void {
     console.log("HI"); // doesn't return anything!
 }
 
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Cat {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    dance(dance: string = "tango") {
+        return `${this.name} dances the ${dance}`;
+    }
+}
+
+let fluffy = new Cat("Fluffy");
 
 
 
@@ -145,6 +165,10 @@ function getUpperName(person: { name: string; }): string {
     return person.name.toUpperCase();
 }
 
+
+
+//////////////////////////////////////////////////////////////////////////////
+
 let x: number | string;
 
 x = 42;
@@ -155,6 +179,13 @@ let y: any;
 y = 42;
 y = "hello";
 
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
 
 const h1 = document.querySelector("h1") as HTMLElement;
 
@@ -183,7 +214,7 @@ k.split("");
 
 if (typeof k === "string") {
     // can use string methods here!
-    k.split();
+    k.toLowerCase();
 }
 
 
@@ -197,3 +228,63 @@ async function myAsyncFunc1(): number {
 async function myAsyncFunc2(): Promise<number> {
     return 42;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+//variable to get rid of unused errors
+
+jane;
+bob;
+janeDoe;
+
+let sammy: StudentInterface = {
+    name: "sammy",
+    cohort: "one"
+};
+
+let Devarsh: InstructorInterface = {
+    name: "Devarsh",
+    salary: 100000000
+};
+
+showUserInfo(jane);
+
+makeRandoUser("alex");
+
+getUpperName(jane);
+x.toLowerCase();
+y;
+myAsyncFunc1();
+myAsyncFunc2();
+fluffy.dance();
