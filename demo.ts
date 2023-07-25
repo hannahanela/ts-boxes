@@ -1,5 +1,5 @@
 // learns that age is a number
-let age = 42;
+let age: number = 42;
 
 // or: provide type explicitly
 let myAge: string;
@@ -31,7 +31,7 @@ anyValue.push("string2", 28);
 
 let strings: string[] = [];
 
-strings.push(23, "string");
+strings.push("string");
 
 
 
@@ -104,6 +104,7 @@ class Cat {
 }
 
 let fluffy = new Cat("Fluffy");
+let sparkles = new Cat(8);
 
 
 
@@ -142,7 +143,7 @@ let janeDoe: UserInterface2 = {
 ///////////////////////////////////////////////////////////////////////////////
 
 function showUserInfo(user: UserInterface): void {
-    console.log(`${user.username} is ${user.age}`);
+    console.log(`${user.username} is ${user.age} ${user.height}`);
 }
 function makeRandoUser(name: string): UserInterface {
     return {
@@ -171,8 +172,10 @@ function getUpperName(person: { name: string; }): string {
 
 let x: number | string;
 
-x = 42;
-x = "hello";
+// x = 42;
+// x = "hello";
+
+x.split();
 
 let y: any;
 
@@ -197,7 +200,7 @@ function myFunc(s: string): string | null {
 let a = myFunc("good");
 a.slice();                  // error!
 
-let b = myFunc("good")!;    // note the "!"
+let b = myFunc("nope")!;    // note the "!"
 b.slice();
 
 
