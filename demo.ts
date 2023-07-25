@@ -15,6 +15,10 @@ myAge.split("");
 age = "42";
 
 
+
+
+///////////////////////////////////////////////////////////////////////////////
+
 const foods = ["carrots", "chicken"];
 
 foods.push("tacos");
@@ -29,6 +33,9 @@ let strings: string[] = [];
 
 strings.push(23, "string");
 
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 let movieData = {
     title: "The Godfather",
@@ -53,6 +60,11 @@ person.firstName = "John";
 person.age = 12;
 
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
 function isSeven(n: number): string {
     if (n === 7) return "THAT IS INDEED 7!";
 
@@ -72,6 +84,11 @@ function hi(): void {
     console.log("HI"); // doesn't return anything!
 }
 
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
 
 interface UserInterface {
     username: string;
@@ -97,6 +114,12 @@ let janeDoe: UserInterface2 = {
     username: "jane",
 };
 
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
 
 function showUserInfo(user: UserInterface): void {
     console.log(`${user.username} is ${user.age}`);
@@ -131,3 +154,46 @@ let y: any;
 
 y = 42;
 y = "hello";
+
+
+const h1 = document.querySelector("h1") as HTMLElement;
+
+function myFunc(s: string): string | null {
+    if (s === "nope") return null;
+    return "ok!";
+}
+
+let a = myFunc("good");
+a.slice();                  // error!
+
+let b = myFunc("good")!;    // note the "!"
+b.slice();
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+function maybe(): string | void {
+    if (Math.random() < 0.5) return "ok";
+}
+
+let k = maybe();
+k.split("");
+
+if (typeof k === "string") {
+    // can use string methods here!
+    k.split();
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+async function myAsyncFunc1(): number {
+    return 42;
+}
+
+async function myAsyncFunc2(): Promise<number> {
+    return 42;
+}
